@@ -17,6 +17,10 @@
     "ping",
     "host"
   ],
+  "bugs": {
+    "url": "https://github.com/andretimm/ping-observer.git/issues"
+  },
+  "homepage": "https://github.com/andretimm/ping-observer.git#readme",
   "author": "andre.timm",
   "license": "MIT",
   "dependencies": {
