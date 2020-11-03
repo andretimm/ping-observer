@@ -9,9 +9,9 @@ npm install ping-observer
 
 ## How to
 ```javascript
-let pingObersever = require('ping-observer');
+let pingObserver = require('ping-observer');
 
-let host = new pingObersever({
+let host = new pingObserver({
 	host:'google.com', 
 	interval: 5000,
 	timeout: 10
