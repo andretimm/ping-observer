@@ -49,20 +49,8 @@ function message(host, alive, time) {
         res = {
             alive: alive,
             url: host,
-            time: "Unknown error"
+            time: "Unknown"
         }
     }
     return res;
 }
-
-var teste = new PingObserver({ host: 'fluig.bramoffshore.com.br', interval: 300, timeout: 10 });
-teste.start();
-
-teste.on('available', (data) => {
-    console.log(data);
-});
-
-
-setTimeout(function () {
-    teste.stop();
-}, 3000);
