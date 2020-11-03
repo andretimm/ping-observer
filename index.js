@@ -54,3 +54,5 @@ function message(host, alive, time) {
     }
     return res;
 }
+
+module.exports = PingObserver;
