@@ -1,0 +1,27 @@
+{
+  "name": "ping-observer",
+  "version": "1.0.0",
+  "description": "Simple PING monitoring",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andretimm/ping-observer.git"
+  },
+  "keywords": [
+    "url",
+    "monitoring",
+    "monitor",
+    "ping",
+    "host"
+  ],
+  "author": "andre.timm",
+  "license": "MIT",
+  "dependencies": {
+    "events": "^3.2.0",
+    "ping": "^0.3.0",
+    "util": "^0.12.3"
+  }
+}
