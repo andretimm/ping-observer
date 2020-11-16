@@ -52,6 +52,7 @@ host.start();
 
 ## Updates
 - `v1.0.0 :` Initial release
+- `v1.0.2 :` Add optional options does not provided
 
 ## Licence
 The MIT License (MIT) 
