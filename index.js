@@ -7,6 +7,7 @@ class PingObserver {
         this.host = options.host;
         this.interval = options.interval || 5000;
         this.timeout = options.timeout || 3000;
+        this.arguments = options.arguments || [];
         this.handle = null;
     }
     start() {
@@ -25,14 +26,28 @@ class PingObserver {
 
 async function pingUrl(host) {
     let self = this;
-    let res = await ping.promise.probe(host, {
-        timeout: self.timeout,
-    });
+    let config = getConfig(self);
+
+    console.log(config);
+
+    let res = await ping.promise.probe(host, config);
     if (res.alive) {
         self.emit('available', message(host, res.alive, res.time));
     } else {
         self.emit('unavailable', message(host, res.alive, res.time));
     }
+}
+
+function getConfig(self) {
+    let config = {
+        timeout: self.timeout,
+    };
+
+    if (self.arguments.length > 0) {
+        config.extra = self.arguments;
+    }
+
+    return config;
 }
 
 util.inherits(PingObserver, event);

@@ -14,7 +14,8 @@ let pingObserver = require('ping-observer');
 let host = new pingObserver({
 	host:'google.com', 
 	interval: 5000,
-	timeout: 10
+	timeout: 10,
+	arguments: ['-w','10']
 });
 
 host.on('available', (data) => {
@@ -34,7 +35,8 @@ host.start();
 {
 	host:'google.com', // Required
 	interval: 5000, // Time interval in ms, default to 5000
-	timeout: 3000  // Timeout in seconds, default to 3000
+	timeout: 3000, // Timeout in seconds, default to 3000
+	arguments: ['-w','10']  // Optional options does not provided
 }
 ```
 
